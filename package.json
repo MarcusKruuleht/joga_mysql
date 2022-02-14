@@ -4,5 +4,23 @@
     "express": "^4.17.2",
     "express-handlebars": "^6.0.2",
     "mysql": "^2.18.1"
-  }
+  },
+  "name": "joga_mysql",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcusKruuleht/joga_mysql.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarcusKruuleht/joga_mysql/issues"
+  },
+  "homepage": "https://github.com/MarcusKruuleht/joga_mysql#readme"
 }
