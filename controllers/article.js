@@ -36,9 +36,31 @@ const getArticleBySlug = (req, res) => {
     });
 };
 
+const getAuthorPage = (req, res) => {
+    let query = `SELECT 
+                    article.name AS name, 
+                    article.image AS image, 
+                    article.slug AS slug, 
+                    article.author_id AS author_id, 
+                    author.name AS author 
+                    FROM article INNER JOIN author ON article.author_id=author.id 
+                    WHERE author.id="${req.params.id}"`;
+    let articles = []
+    let name
+    con.query(query, (err, result) => {
+        if (err) throw err;
+        articles = result
+        name = result[0]
+        res.render('author', {
+            articles: articles,
+            name: name
+        })
+    })
+};
 
 // export controller functions
 module.exports = {
     getAllArtticles,
-    getArticleBySlug
+    getArticleBySlug,
+    getAuthorPage
 }
